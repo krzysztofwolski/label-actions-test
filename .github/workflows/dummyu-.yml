@@ -4,7 +4,7 @@
 on:
   pull_request:
     branches:
-      - example/t2
+      - main
 
 jobs:
   label-example-branch:
