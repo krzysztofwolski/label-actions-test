@@ -4,7 +4,7 @@
 on:
   push:
     branches:
-      - 'example/**'
+      - 'example**'
 
 jobs:
   label-example-branch:
