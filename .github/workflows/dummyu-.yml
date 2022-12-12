@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "Deploying to production server on branch $GITHUB_REF_NAME"
+          echo "Deploying to production server on branch $GITHUB_HEAD_REF"
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: |
