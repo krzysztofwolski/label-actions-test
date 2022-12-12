@@ -4,7 +4,8 @@
 on:
   pull_request:
     branches:
-      - 'example**'
+      - 'example*'
+
 jobs:
   label-example-branch:
     runs-on: ubuntu-latest
