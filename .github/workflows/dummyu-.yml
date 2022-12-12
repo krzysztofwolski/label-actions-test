@@ -5,23 +5,16 @@ on:
   pull_request
 
 jobs:
-  label-example-branch:
-    name: Add example label to the PR
+  example-branches-checks:
+    name: Example branch management
     if: ${{ startsWith(github.head_ref, 'example') }}
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Deploying to production server on branch $GITHUB_HEAD_REF"
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: |
             example
-
-  block-example-merging:
-    name: Example branches are not meant to be merged
-    runs-on: ubuntu-latest
-    steps:
-      - name: Prevent example branches from merging
+      - name: Example branches are not meant to be merged
         run: |
           echo "Example branches are not meant to be merged"
           exit 1
