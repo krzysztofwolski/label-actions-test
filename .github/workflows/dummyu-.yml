@@ -2,7 +2,9 @@
 # documentation/usage example.
 # After accepting the branch, the main PR should be closed
 on:
-  pull_request
+  pull_request:
+    branches:
+      - 'example/*'
 
 jobs:
   label-example-branch:
