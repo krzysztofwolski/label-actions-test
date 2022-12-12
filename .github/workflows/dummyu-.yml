@@ -7,9 +7,11 @@ on:
 jobs:
   label-example-branch:
     name: Add example label to the PR
-    if: ${{ startsWith(github.ref, 'refs/heads/example') }}
+    # if: ${{ startsWith(github.ref, 'refs/heads/example') }}
     runs-on: ubuntu-latest
     steps:
+      - run: |
+          echo "Deploying to production server on branch $GITHUB_REF"
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: |
