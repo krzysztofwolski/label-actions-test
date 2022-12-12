@@ -2,13 +2,12 @@
 # documentation/usage example.
 # After accepting the branch, the main PR should be closed
 on:
-  pull_request:
-    branches:
-      - 'example**'
+  pull_request
 
 jobs:
   label-example-branch:
     name: Add example label to the PR
+    if: ${{ startsWith(github.ref, 'refs/heads/example') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions-ecosystem/action-add-labels@v1
