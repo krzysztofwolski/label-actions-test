@@ -4,7 +4,7 @@
 on:
   pull_request:
     branches:
-      - main
+      - 'example**'
 
 jobs:
   label-example-branch:
