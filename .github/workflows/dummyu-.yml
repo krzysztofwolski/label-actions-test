@@ -7,7 +7,7 @@ on:
 jobs:
   label-example-branch:
     name: Add example label to the PR
-    # if: ${{ startsWith(github.ref, 'refs/heads/example') }}
+    if: ${{ startsWith(github.head_ref, 'example') }}
     runs-on: ubuntu-latest
     steps:
       - run: |
