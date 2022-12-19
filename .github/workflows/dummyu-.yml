@@ -14,6 +14,7 @@ jobs:
         with:
           labels: |
             example
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Example branches are not meant to be merged
         run: |
           echo "Example branches are not meant to be merged"
